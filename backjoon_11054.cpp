@@ -67,7 +67,7 @@ int DFS(int v){
 //    itrDFSUtil(v, visited);
 }
 
-int main(){
+int _main(){
     cin >> V;
     int node;
 //    adj_list = new vector<int>[V];
