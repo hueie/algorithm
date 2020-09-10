@@ -1,3 +1,4 @@
+//github: https://github.com/hueie/algorithm/blob/master/blog/stack.cpp
 #include <stdio.h>
 #define STACKSIZE 10
 #define ERROR_VALUE 0xfffffff
