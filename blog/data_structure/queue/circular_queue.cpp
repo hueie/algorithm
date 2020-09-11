@@ -8,12 +8,12 @@ int rear = 0;
 
 void Add(int data)
 {
-    if( rear == QUEUESIZE)
+    if((rear+1) % QUEUESIZE == front)
     {
         puts("More data cannot be stored");
         return;
     }
-    Queue[rear++] = data;
+    Queue[rear = (rear+1) % QUEUESIZE] = data;
 }
 
 int Delete()
@@ -23,11 +23,30 @@ int Delete()
         puts("There's no data in Queue");
         return ERROR_VALUE;
     }
-    return Queue[front++];
+    return Queue[front = (front+1) % QUEUESIZE];
 }
 
 int main()
 {
+    // the 12 addition and removal of items happens
+    Add(100);
+    Add(200);
+    Add(300);
+    printf("%d\n", Delete());
+    printf("%d\n", Delete());
+    printf("%d\n", Delete());
+    Add(100);
+    Add(200);
+    Add(300);
+    printf("%d\n", Delete());
+    printf("%d\n", Delete());
+    printf("%d\n", Delete());
+    Add(100);
+    Add(200);
+    Add(300);
+    printf("%d\n", Delete());
+    printf("%d\n", Delete());
+    printf("%d\n", Delete());
     Add(100);
     Add(200);
     Add(300);
